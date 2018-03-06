@@ -1,0 +1,242 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	background:rgb(245,245,245);
+}
+/*登录按钮样式*/
+.qqlogo{
+	border:1px solid deepskyblue;
+	color:deepskyblue !important;
+	background: white;
+	width:100px;
+	height:30px;
+	margin:10px 180px;
+	text-align: center;
+	font-size: 15px;
+	display: block;
+}
+.qqlogo>i,.qqlogin>i,.weibologin>i{
+	margin-right:5px;
+}
+.reg{
+	width:100%;
+	background: #fff;
+}
+.reg>.reg-r a{
+	color:#666;
+	font-size: 16px;
+	margin-right:25px;
+}
+.reg-r{
+	margin-top:10px;
+	margin-right:200px;
+}
+.reg-r>.qqlogin{
+	border:1px solid deepskyblue;
+	color:deepskyblue !important;
+	background: white;
+	width:100px;
+	height:30px;
+	/*margin:10px 180px;*/
+	text-align: center;
+	font-size: 15px;
+	display: block-inline;
+}
+.weibologin{
+	border:1px solid #ff734a;
+	color:#ff734a !important;
+	background: white;
+	width:100px;
+	height:30px;
+	/*margin:10px 180px;*/
+	text-align: center;
+	font-size: 15px;
+	display: block-inline;
+}
+.reg a:hover{
+	text-decoration: none;
+}
+/*顶部登录样式结束*/
+/*顶部导航栏*/
+.header{
+	/*margin-top: 120px;*/
+	width:100%;
+	height:80px;
+	background:#0082df;
+	overflow:hidden;
+	
+}
+.header>.nav-left img{
+	display:block;
+	margin:10px 180px;
+}
+.header>.nav-right>ul{
+	margin-right:200px;
+}
+.header>.nav-right ul>li{
+	list-style: none;
+	float:left;
+	margin-right:80px;
+	width:90px;
+	height:80px;
+	text-align: center;
+	line-height: 80px;
+}
+.header li>a{
+	font-size:20px;
+	color:#fff;
+}
+.header>.nav-right li:hover{
+	background:rgb(0, 111, 216);
+}
+.header>.nav-right li>a:hover{
+	text-decoration: none;
+}
+/*顶部搜索*/
+.topsearch{
+	width:100%;
+	height:150px;
+	/*background:red;*/
+}
+.topsearch>.sear{
+	text-align: center;
+}
+.topsearch>.sear>input{
+	width:600px;
+	height:60px;
+	background:white;
+	border:3px solid deepskyblue;
+	text-indent: 2em;
+	/*line-height: 150px;*/
+	margin-top:30px;
+	outline:none;
+	
+}
+
+.sear>button{
+	background: deepskyblue;
+	width:150px;
+	height:60px;
+	color:white;
+	outline:none;
+	border:1px solid deepskyblue;
+	font-size:18px;
+}
+.sear>button>i{
+	margin-right:10px;
+}
+/*轮播部分*/
+.banner{
+	max-width:1200px;
+	margin:20px auto;
+	
+}
+/*标签部分*/
+.tag-l,.tag-r{
+	width:600px;
+	/*height:260px;*/
+	
+}
+.tag-l .tag-top,.tag-r .tag-top{
+	border:1px solid grey;
+	height:40px;
+	line-height: 40px;
+	color:#000;
+	font-size:16px;
+	text-indent: 2em;
+	font-weight:bold;
+}
+.tag a{
+	
+	margin-right:5px;
+	color:#6e6e6e;
+}
+.tag .tag-top a{
+	float: right;
+}
+.tag-left a,.tag-right a{
+	float: right;
+	margin-right:5px;
+	color:#000;
+}
+.tag a:hover{
+	text-decoration: none;
+}
+.tag-list{
+	width:100%;
+	height:140px;
+	border: 1px solid grey;
+}
+.tag-list ul li{
+	list-style: none;
+	float:left;
+	width:15%;
+	margin-top:7px;
+	margin-left: 25px;
+}
+.tag-list ul li>a,{
+	color:#6e6e6e;
+	
+}
+/*浮动两个标签列表*/
+.tag{
+	float:left;
+	margin:0 auto;
+}
+.tag-l{
+	float:left;
+}
+.tag-r{
+	float:right
+}
+/*给标签父级居中*/
+.box{
+	max-width:1300px;
+	margin:0 auto;
+}
+.box .tag-l,.box .tag-r{
+	/*box-sizing: border-box;*/
+	/*margin:0 50px;*/
+	margin-right: 50px;
+	background:#fff;
+	
+}
+/*瀑布流分布*/
+.code .nav>.nav-left{
+	float:left;
+}
+.code .nav>.nav-right{
+	float:right;
+}
+.code{
+	max-width:1300px;
+	margin:0px auto;
+}
+.code .nav .nav-left,.code .nav .nav-right{
+	margin-top: 30px;
+}
+.nav-left{
+	font-size: 18px;
+}
+.nav-right{
+	margin-right:50px;
+}
+.nav-right button{
+	width:80px;
+	height:30px;
+	background:#fff;
+	outline: none;
+	border:1px solid #d9d9d9;
+	margin-right:20px;
+	line-height: 30px;
+	color:#262626;
+}
+.nav-right button:hover{
+	background:#0082df;
+	color:#fff;
+}
+.nav button:hover{
+	
+}
