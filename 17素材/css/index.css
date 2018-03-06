@@ -4,6 +4,7 @@
 }
 body{
 	background:rgb(245,245,245);
+	/*background: green;*/
 }
 /*登录按钮样式*/
 .qqlogo{
@@ -237,6 +238,15 @@ body{
 	background:#0082df;
 	color:#fff;
 }
-.nav button:hover{
-	
+/*瀑布流展示区*/
+.code .pic{
+	float:left;
+}
+.code .pic li{
+list-style:none;
+/*float:left;*/
+}
+.code ul{
+	float:left!important;
+	display: inline;
 }

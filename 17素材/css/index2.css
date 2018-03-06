@@ -4,6 +4,7 @@
 }
 body{
 	background:rgb(245,245,245);
+	/*background: green;*/
 }
 /*登录按钮样式*/
 .qqlogo{
@@ -80,7 +81,7 @@ body{
 .header>.nav-right ul>li{
 	list-style: none;
 	float:left;
-	margin-right:8px;
+	/*margin-right:8px;*/
 	width:120px;
 	height:80px;
 	text-align: center;
@@ -206,17 +207,18 @@ body{
 	
 }
 /*瀑布流分布*/
-.code .nav>.nav-left{
+.code .nav>.nav-left,.sign .nav>.nav-left{
 	float:left;
+	font-size:28px;
 }
-.code .nav>.nav-right{
+.code .nav>.nav-right,.sign .nav>.nav-right{
 	float:right;
 }
-.code{
+.code,.sign{
 	max-width:1300px;
 	margin:0px auto;
 }
-.code .nav .nav-left,.code .nav .nav-right{
+.code .nav .nav-left,.code .nav .nav-right,.sign .nav .nav-left,.sign .nav .nav-right{
 	margin-top: 30px;
 }
 .nav-left{
@@ -239,6 +241,35 @@ body{
 	background:#0082df;
 	color:#fff;
 }
-.nav button:hover{
-	
+/*瀑布流区域*/
+.code .pic,.sign .pic{
+width:1400px;
+margin:20px auto;
+overflow:hidden;
 }
+.code .pic ul>li,.sign .pic ul>li{
+list-style: none;
+background:#fff;
+margin:20px 0px;
+box-sizing: border-box;
+/*padding:0 20px;*/
+margin-left: 10px;
+
+}
+.pic ul{
+float:left;
+width:280px;
+}
+.pic ul>li p{
+width:280px;
+text-align:center;
+margin:10px 0;
+/*background:red;*/
+}
+.pic ul>li p i{
+margin-right:20px;
+}
+.pic ul>li p .u-r{
+float:right;
+}
+
