@@ -6,6 +6,13 @@ body{
 	background:rgb(245,245,245);
 	/*background: green;*/
 }
+/*阿里矢量图库引用*/
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
 /*登录按钮样式*/
 .qqlogo{
 	border:1px solid deepskyblue;
@@ -102,7 +109,7 @@ body{
 .topsearch{
 	width:100%;
 	height:150px;
-	/*background:red;*/
+	background:rgb(255,255,255);
 }
 .topsearch>.sear{
 	text-align: center;
@@ -256,6 +263,7 @@ margin-left: 10px;
 .pic ul{
 float:left;
 width:280px;
+margin:10px 18px;
 }
 .pic ul>li p{
 width:280px;
@@ -312,7 +320,7 @@ float:right;
 }
 /*顶部固定导航和搜索*/
 .fnav{
-	/*display:none;*/
+	display:none;
 	position:fixed;
 	top:0;
 	width:100%;
@@ -403,4 +411,206 @@ float:right;
 .fnav>.sear>.search>button>.fa{
 	/*margin-left:-18px;*/
 	margin-right:18px;
+}
+/*右下角菜单栏*/
+.rbar{
+	width:50px;
+	height:150px;
+	position: fixed;
+	bottom:80px;
+	right:50px;
+}
+.rbar .m3{
+	display:none;
+}
+.rbar>div,.rbar a{
+	width:50px;
+	height:50px;
+	/*border: 1px solid deepskyblue;*/
+	text-align:center;
+	line-height: 50px;
+	background: rgb(238, 238, 238);
+	margin-top:3px;
+	font-size:30px;
+	color:rgb(125, 125, 125);
+	cursor: pointer;
+}
+.rbar>div:hover,.rbar a:hover{
+	background: rgb(97, 182, 81);
+	color:#fff;
+}
+/*微信隐藏样式*/
+.wx{
+	position:fixed;
+	display:none;
+	bottom:340px;
+	right:230px;
+}
+/*以下样式是code.html样式*/
+.add{
+	max-width: 1200px;
+	margin:0 60px;;
+
+}
+.add a,.add span{
+	color:rgb(153, 153, 153);
+	text-decoration: none;
+	font-size: 15px;
+}
+.add span{
+	margin:0 10px;
+}
+a{
+	font-size: 15px;
+	color:#333333;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+/*导航列表*/
+.title{
+	max-width: 1400px;
+	margin:0 auto;
+	height:100px;
+	background:rgb(255,255,255);
+}
+.title ul li,.title ul li a{
+	float:left;
+	list-style:none;
+	font-size:18px;
+	color:#000;
+	width:140px;
+	height:45px;
+	line-height:45px;
+	background: ;
+	
+}
+.title>.box1{
+	border-bottom:3px solid dodgerblue;
+		width:1400px;
+	height:45px;
+}
+.title>.box1 ul li{
+	text-indent:2em;
+}
+.title>.box1 ul li:hover a{
+	color:#fff;
+	background: #0082df;
+}
+.title>.box2 {
+	width:1400px;
+	height:55px;
+	line-height:55px;
+}
+.title>.box2 a{
+	margin:0 20px;
+	/*display: inline-block;*/
+	/*width:120px;*/
+	/*height:33px;*/
+	padding:10px;
+}
+.title>.box2 a:hover{
+	color:#1169c1;
+	border: 1px solid #1169c1;
+	border-radius:3px;
+}
+/*底部翻页样式*/
+.page{
+	width:1100px;
+	margin:20px auto;
+	text-align: center;
+	overflow:hidden;
+}
+.page ul li{
+	float:left;
+	list-style:none;
+	border:1px solid #d9d9d9;
+	width:100px;
+	height:70px;
+	background: rgb(255,255,255);
+	line-height: 70px;
+	margin-right:10px;
+}
+.page li a{
+	font-size: 18px;
+}
+.page ul li:hover,.page ul li:hover a{
+	background: #168ee1;
+	color:#fff;
+}
+/*默认选中.active第一页*/
+.active,.active a{
+background: #168ee1!important;
+	color:#fff!important;	
+}
+/*无法选择的样式.no样式*/
+#no,#no a{
+	cursor: default;
+	background:#fff;
+	color:#bfbfbf;
+}
+#no:hover,#no:hover a{
+	background:#fff;
+	color:#bfbfbf;
+}
+/*排行榜页面样式*/
+.rank{
+	width:100%;
+	height:420px;
+	background: url(../img/rank.jpg) no-repeat center center;
+}
+.ranknav{
+	width:100%;
+	height:80px;
+	background:rgb(255,255,255);
+}
+.ranknav>ul{
+	margin:0 auto;
+	max-width:1000px;
+	
+}
+.ranknav ul li{
+	line-height: 80px;
+	list-style: none;
+	float: left;
+	width:120px;
+	text-align: center;
+
+}
+.ranknav ul li>a{
+	font-size: 18px;
+}
+.ranknav li:hover,.hov{
+		border-bottom:3px solid #0063ca;
+}
+.ranknav li a:hover,.hov{
+	color:#0063ca;
+}
+/*默认选中的样式*/
+/*.ranknav ul .dj{
+	border-bottom:3px solid #0063ca;
+	color:#0063ca;
+}*/
+.hov>a{
+		color:#0063ca;
+}
+/*表格内容*/
+.con{
+	width:1200px;
+	height:800px;
+	background: rgb(255,255,255);
+	margin:20px auto;
+}
+.con th{
+	color:#0063ca;
+}
+.con table tbody tr td span{
+	margin:0 15px;
+}
+.con td img{
+	border-radius:50%;
+}
+.con table{
+	border:1px solid transparent;
 }

@@ -6,6 +6,13 @@ body{
 	background:rgb(245,245,245);
 	/*background: green;*/
 }
+/*阿里矢量图库引用*/
+.icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+}
 /*登录按钮样式*/
 .qqlogo{
 	border:1px solid deepskyblue;
@@ -284,14 +291,12 @@ overflow:hidden;
 list-style: none;
 background:#fff;
 margin:20px 0px;
-box-sizing: border-box;
-/*padding:0 20px;*/
-margin-left: 10px;
-
+tr
 }
 .pic ul{
 float:left;
 width:280px;
+margin:10px 50px 10px 0;
 }
 .pic ul>li p{
 width:280px;
@@ -350,6 +355,7 @@ float:right;
 /*顶部固定导航和搜索*/
 .fnav{
 	position:fixed;
+	display:none;
 	top:0;
 	width:100%;
 	height:120px;
@@ -411,10 +417,14 @@ float:right;
 	background:#fff;
 	float:left;
 	margin-top: -10px;
+	
 
 }
 .fnav .sear .search{
 	margin:20px auto;
+	/*margin-left:80px;*/
+	transform: translate(40px,0px);
+	
 }
 .fnav .sear img{
 	margin:18px 180px;
@@ -440,4 +450,72 @@ float:right;
 	/*margin-left:-18px;*/
 	margin-right:18px;
 }
-
+/*右下角菜单栏*/
+.rbar{
+	width:50px;
+	height:150px;
+	position: fixed;
+	bottom:80px;
+	right:50px;
+}
+.rbar .m3{
+	display:none;
+}
+.rbar>div,.rbar a{
+	width:50px;
+	height:50px;
+	/*border: 1px solid deepskyblue;*/
+	text-align:center;
+	line-height: 50px;
+	background: rgb(238, 238, 238);
+	margin-top:3px;
+	font-size:30px;
+	color:rgb(125, 125, 125);
+	cursor: pointer;
+}
+.rbar>div:hover,.rbar a:hover{
+	background: rgb(97, 182, 81);
+	color:#fff;
+}
+/*微信隐藏样式*/
+.wx{
+	position:fixed;
+	display:none;
+	bottom:340px;
+	right:230px;
+}
+/*以下样式是code.html样式*/
+.add{
+	max-width: 1200px;
+	margin:0 auto;
+}
+.add a,.add span{
+	color:rgb(153, 153, 153);
+	text-decoration: none;
+	font-size: 15px;
+}
+.add span{
+	margin:0 10px;
+}
+/*导航列表*/
+.title{
+	max-width: 1400px;
+	margin:0 auto;
+	height:100px;
+	background:orangered;
+}
+.title ul li,.title a{
+	float:left;
+	list-style:none;
+	font-size:18px;
+	color:#000;
+	width:120px;
+	height:45px;
+	line-height:45px;
+	background: #0082DF;
+}
+.title>.box1{
+	border-bottom:3px solid dodgerblue;
+		width:1400px;
+	height:45px;
+}
