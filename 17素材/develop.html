@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>17素材网排行榜页面</title>
+		<title>17素材网金币素材页面</title>
 		<!--cdn引入-->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
@@ -11,6 +11,7 @@
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<script src="js/iconfont.js"></script>
+		<script src="js/iconfont1.js"></script>
 		<!--cdn引入结束-->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" media="screen and (min-width:1901px)" href="css/index.css" />
@@ -45,125 +46,83 @@
 				</ul>
 			</div>
 		</div>
-		<div class="rank"></div>
-		<div class="ranknav">
-			<ul>
-				<li class="hov"><a href="">发布排行</a></li>
-				<li><a href="">收藏排行</a></li>
-				<li><a href="">积分排行</a></li>
-				<li><a href="">下载排行</a></li>
-				<li><a href="">金币排行</a></li>
-				<li><a href="">邀请好友</a></li>
-			</ul>
-			<!--ranknav的选中样式-->
-			<script type="text/javascript">
-				$(function(){
-					$(".ranknav ul li").hover(function(){
-						$(this).addClass("hov").siblings().removeClass('hov');
-					},function(){
-						//划出之后执行hover状态停留在第一个li上
-						$(".ranknav ul li").eq(0).addClass("hov");
-						$(this).removeClass('hov');
-					})
+		<!--顶部搜索框-->
+		<div class="topsearch">
+			<!--输入框-->
+			<div class="sear"><input type="text" placeholder="共 14553 张 / 昨日更新7张" /><button type="botton"><i class="fa fa-search"></i>搜索</button></div>
+		</div>
+		<div class="tool">
+			<div class="box1">
+				<a href="">
+					<svg class="icon" aria-hidden="true">
+				  <use xlink:href="#icon-icon-test"></use>
+				</svg>
+				</a>
+				<p class="lg">代码整理</p>
+				<p>js,css,html代码格式化</p>
+			</div>
+			<div class="box2">
+				<a href="">
+					<svg class="icon" aria-hidden="true">
+				  <use xlink:href="#icon-shuji"></use>
+				</svg>
+				</a>
+				<p class="lg">jQuery手册</p>
+				<p>方法调用,使用手册</p>
+			</div>
+			<div class="box3">
+				<a href="">
+					<svg class="icon" aria-hidden="true">
+				  <use xlink:href="#icon-shu"></use>
+				</svg>
+				</a>
+				<p class="lg">文本对比</p>
+				<p>左右两边文本作比较</p>
+			</div>
+			<div class="box4">
+				<a href="">
+					<svg class="icon" aria-hidden="true">
+				  <use xlink:href="#icon-taobao"></use>
+				</svg>
+				</a>
+				<p class="lg">jQuery下载</p>
+				<p>各种版本jQuery下载</p>
+			</div>
+		</div>
+		<div class="text">
+			<h3>软件下载<span>常用的网页设计制作软件工具</span></h3>
+		</div>
+		<!--底部彩色书签-->
+		<div class="sq">
+			<div class="box1"><a href=""><div class="img"></div><dl>
+				<dt>配色方案</dt>
+				<dd>这里是描述</dd>
+			</dl></a></div>
+			<div class="box2"><a href=""><div class="img"></div><dl>
+				<dt>色彩海洋</dt>
+				<dd>这里是描述</dd>
+			</dl></a></div>
+			<div class="box3"><a href=""><div class="img"></div><dl>
+				<dt>趣味配色</dt>
+				<dd>这里是描述</dd>
+			</dl></a></div>
+			<div class="box4"><a href=""><div class="img"></div><dl>
+				<dt>印象配色</dt>
+				<dd>这里是描述</dd>
+			</dl></a></div>
+		</div>
+		<!--滑过卡片效果-->
+		<script type="text/javascript">
+			$(function(){
+				$(".sq>div").hover(function(){
+					$(this).css({"transform":"translate(0,-3px)","box-shadow":'3px 3px 10px #e7e7e7'})
+				},function(){
+//					$(this).css({"transform":"translate(0,3px)"})
+						false;
 				})
-			</script>
-		</div>
-		<!--排行榜表格内容-->
-		<div class="con">
-			<table class="table table-bordered table-striped table-hover">
-  <thead bgcolor="#e4f6ff">
-     <th>排名</th>
-     <th>用户</th>
-     <th>发布数量</th>
-  </thead>
-  <tbody>
-     <tr>
-        <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
- <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
- <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-      <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-      <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-      <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-      <tr>
-         <td><span>1</span></td> 
-        <td><img width="32px" src="img/qlogo.jpg"/><span>十月梦想</span></td> 
-        <td>616</td> 
-     </tr>
-     
-  </tbody>
-</table>
-<!--底部翻页样式-->
-		<div class="page">
-			<ul>
-				<li id="no"><a href="javascript:void(0)" >上一页</a></li>
-				<li class="active"><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li><a href="">4</a></li>
-				<li><a href="">5</a></li>
-				<li><a href="">6</a></li>
-				<li id="no"><a href="javascript:void(0)">...</a></li>
-				<li><a href="">156</a></li>
-				<li><a href="">下一页</a></li>
-			</ul>
-		</div>
-		</div>
-		
-		
-			<!--底部版权-->
+			})
+		</script>
+					<!--底部版权-->
 		<div class="footer">
 			<div class="box">
 				<a href="">17素材网</a>

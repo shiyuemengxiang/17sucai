@@ -1,6 +1,7 @@
 *{
 	padding:0;
 	margin:0;
+
 }
 body{
 	background:rgb(245,245,245);
@@ -614,3 +615,163 @@ background: #168ee1!important;
 .con table{
 	border:1px solid transparent;
 }
+/*开发工具页面样式*/
+.tool{
+	display:flex;
+	justify-content:center;
+	min-width:1200px;
+	margin:10px auto;
+	/*background:red;*/
+	height:400px;
+	
+}
+.tool>div{
+	width:230px;
+	height:230px;
+	background: orange;
+	float: left;
+	margin:40px 30px;
+}
+.tool>.box1{
+	background: #4ebf56;
+}
+.tool>.box2{
+	background: #3ab4a9;
+}
+.tool>.box3{
+	background:#71a7e0;
+}
+.tool>.box4{
+	background: #fa5f5b;
+}
+.tool>div>a{
+	font-size:6em;
+	color:rgb(255,255,255);
+	/*text-align:center;*/
+	margin:0 auto;
+	display: block;
+}
+.tool>div>a>svg{
+	display: block;
+	margin:30px auto;
+	text-align:center;
+	
+}
+.tool>div>p{
+	text-align:center;
+	color:#fff;
+	font-size:15px;
+}
+/*第一行p大字体*/
+.tool>div>.lg{
+	font-size: 22px;
+}
+/*滑过box向上移动3px*/
+.tool>div:hover{
+	transform: translate(0,-3px);
+}
+
+h3{
+		height:150px;
+		/*overflow: hidden;*/
+	margin:-100px 200px;
+	/*text-align: center;*/
+	font-weight: bold;
+	font-size: 22px;
+	color:373737;
+}
+h3>span{
+	margin-left:28px;
+		font-size: 15px;
+	color:#888888;
+}
+/*底部书签卡片区域*/
+.sq{
+	min-width:1200px;
+	height:400px;
+	margin: 0 auto;
+	/*background: orangered;*/
+	display:flex;
+	justify-content:center;
+	/*align-items:center;*/
+}
+.sq>div{
+	margin-top: 30px;
+	width:280px;
+	height:170px;
+	background-color:#fafafa;
+	float: left;
+	margin-left:20px;
+}
+/*小卡片上边框样式*/
+.sq>.box1{
+	
+	border-top:1px solid #ffac13;
+}
+.sq dl{
+	float: right;
+	margin:70px 35px;
+}
+.sq>.box2{
+	border-top: 1px solid #b4d59a;
+}
+.sq>.box3{
+	border-top: 1px solid #2196f3;
+}
+.sq>.box4{
+	border-top: 1px solid #73d3c5;
+}
+/*小卡片定位*/
+.sq>.box1 .img{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	background-image:url(../img/pic.png);
+	background-repeat:no-repeat;
+	background-position:-262px 0px;
+	margin-top:40px;
+	margin-left:40px;
+}
+.sq>.box1 .img{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	background-image:url(../img/pic.png);
+	background-repeat:no-repeat;
+	background-position:-262px 0px;
+	margin-top:40px;
+	margin-left:40px;
+}
+.sq>.box2 .img{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	background-image:url(../img/pic.png);
+	background-repeat:no-repeat;
+	background-position:-355px 0px;
+	margin-top:40px;
+	margin-left:40px;
+}
+
+.sq>.box3 .img{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	background-image:url(../img/pic.png);
+	background-repeat:no-repeat;
+	background-position:-448px 0px;
+	margin-top:40px;
+	margin-left:40px;
+}
+.sq>.box4 .img{
+	display:inline-block;
+	width:90px;
+	height:90px;
+	background-image:url(../img/pic.png);
+	background-repeat:no-repeat;
+	background-position:-541px 0px;
+	margin-top:40px;
+	margin-left:40px;
+}
+
+
