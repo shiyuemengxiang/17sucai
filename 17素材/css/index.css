@@ -21,6 +21,11 @@ body{
    fill: currentColor;
    overflow: hidden;
 }
+/*注册登录样式*/
+.t{
+	display: inline-block;
+	transform:translate(-20px,-5px);
+}
 /*登录按钮样式*/
 .qqlogo{
 	border:1px solid deepskyblue;
@@ -30,7 +35,8 @@ body{
 	height:30px;
 	margin:10px 180px;
 	text-align: center;
-	font-size: 15px;
+	font-size: 14px!important;
+	overflow: hidden;
 	display: block;
 }
 .qqlogo>i,.qqlogin>i,.weibologin>i{
@@ -57,8 +63,9 @@ body{
 	height:30px;
 	/*margin:10px 180px;*/
 	text-align: center;
-	font-size: 15px;
-	display: block-inline;
+	font-size: 14px!important;
+	display: inline-block;
+	overflow: hidden;
 }
 .weibologin{
 	border:1px solid #ff734a;
@@ -68,12 +75,24 @@ body{
 	height:30px;
 	/*margin:10px 180px;*/
 	text-align: center;
-	font-size: 15px;
-	display: block-inline;
+	font-size: 14px!important;
+	display: inline-block;
+	overflow: hidden;
 }
 .reg a:hover{
 	text-decoration: none;
 }
+/*滑过按钮相应logo动画效果*/
+.qqlogo:hover i,.weibologin:hover i,.qqlogin:hover i {
+	animation: 0.8s linear mov;
+}
+	/*动画效果规则*/
+	@keyframes mov{
+		0%{transform:translate(0px,0px)}
+			33%{transform:translate(0px,-20px)}
+			66%{transform:translate(0px,20px)}
+			100%{transform:translate(0px,0px)}
+	}
 /*顶部登录样式结束*/
 /*顶部导航栏*/
 .header{
@@ -114,7 +133,7 @@ body{
 .topsearch{
 	width:100%;
 	height:150px;
-	/*background:red;*/
+	background:rgb(255,255,255);
 }
 .topsearch>.sear{
 	text-align: center;
@@ -145,9 +164,58 @@ body{
 }
 /*轮播部分*/
 .banner{
-	max-width:1200px;
+	width:1200px;
+	height:340px;
+	border: 1px solid deepskyblue;
 	margin:20px auto;
+	position:relative;
 	
+}
+.banner img{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.banner ul{
+	position:absolute;
+	bottom:5px;
+	left:50%;
+	margin-left:-48px;
+}
+.banner ul li{
+	background: #a5a5a5;
+	margin-left:10px;
+	list-style:none;
+	border-radius:50%;
+	cursor: pointer;
+	width:14px;
+	height:14px;
+	float:left;
+}
+/*翻页的按钮*/
+.banner .all{
+	position:absolute;
+	width:50px;
+	height:85px;
+	background:rgba(0,0,0,0.3);
+	top:50%;
+	margin-top: -42px;
+	color:rgba(255,255,255,0.6);
+	font-size:50px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 85px;
+}
+.banner .all:hover{
+	color:rgba(255,255,255,1);
+	background:rgba(0,0,0,0.6);
+}
+.banner .prev{
+	left:5px;
+}
+.banner .next{
+	right:3px;
 }
 /*标签部分*/
 .tag-l,.tag-r{
@@ -189,8 +257,10 @@ body{
 	list-style: none;
 	float:left;
 	width:15%;
-	margin-top:7px;
+	margin-top:4px;
 	margin-left: 25px;
+	margin-bottom:3px;
+	/*margin:1px px;*/
 }
 .tag-list ul li>a,{
 	color:#6e6e6e;
@@ -210,7 +280,7 @@ body{
 /*给标签父级居中*/
 .box{
 	max-width:1300px;
-	margin:0 auto;
+	margin:60px auto;
 }
 .box .tag-l,.box .tag-r{
 	/*box-sizing: border-box;*/

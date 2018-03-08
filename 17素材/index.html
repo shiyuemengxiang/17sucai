@@ -20,13 +20,13 @@
 	<body>
 		<div class="reg">
 			<div class="reg-l pull-left">
-				<a href="" class="qqlogo btn-sm"><i class="fa fa-qq"></i>QQ客服</a>
+				<a href="" class="qqlogo btn-sm icon"><i class="fa fa-qq"></i>QQ客服</a>
 			</div>
 			<div class="reg-r pull-right">
-				<a href="">注册</a>
-				<a href="">登录</a>
-				<a href="" class="qqlogin btn-sm "><i class=" fa fa-qq"></i>QQ登录</a>
-				<a href="" class="weibologin btn-sm"><i class=" fa fa-weibo"></i>微博登录</a>
+				<a href="" class="t">注册</a>
+				<a href="" class="t">登录</a>
+				<a href="" class="qqlogin btn-sm icon" id="mov"><i class=" fa fa-qq"></i>QQ登录</a>
+				<a href="" class="weibologin btn-sm icon" id="mov1"><i class=" fa fa-weibo"></i>微博登录</a>
 			</div>
 		</div>
 		<div class="header">
@@ -52,7 +52,76 @@
 		</div>
 		<!--轮播部分-->
 		<div class="banner">
-			<img src="img/banner.png" alt="" />
+			<img src="img/b1.jpg" alt="" style="display: block;"/>
+			<img src="img/b2.png" alt="" />
+			<img src="img/b3.png" alt="" />
+			<img src="img/b4.png" alt="" />
+			<!--ul形成小圆点-->
+			<ul>
+				<li style="background:#22a9ff" class="li"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<a href="JavaScript:void(0)" class="all prev">&lt;</a>
+			<a href="JavaScript:void(0)" class="all next">&gt;</a>
+			<script type="text/javascript">
+			//轮播图实现
+			$(function(){
+				//全局控制轮播的变量
+				var s=0;
+				var timer;//设置一个控制轮播执行函数的变量
+				//图片切换函数
+				function run(){
+					s++;//s自增
+					if(s==4){
+						s=0;
+					}
+					//s号图片显示其他的同级隐藏
+					$(".banner img").eq(s).fadeIn(500).siblings('img').fadeOut(500);
+					$(".banner ul li").eq(s).css({'background':'#00bfff'}).siblings('li').css({'background':'#a5a5a5'});
+				}
+					timer=setInterval(run,3000);
+					$(".banner ul li").mouseenter(function(){
+						clearInterval(timer);//清空定时器
+						var lithis=$(this);//获取划入的li序号
+						//设置单次定时器解决快速滑动问题
+						tt=setTimeout(function(){
+							//获取当前序号
+							s=lithis.index();
+							$(".banner img").eq(s).fadeIn(500).siblings('img').fadeOut(500);
+					$(".banner ul li").eq(s).css({'background':'#00bfff'}).siblings('li').css({'background':'#a5a5a5'});
+						})
+					})
+					           //给li添加鼠标移出事件(mouseenter),恢复定时器,清除掉单次定时器(快速滑动不执行)
+			           $('.banner ul li').mouseleave(function(){
+			            clearTimeout(tt);
+			            timer=setInterval(run,1000);
+			           })
+			           //翻页效果控制轮播效果
+			           $('.prev').click(function(){
+			           	clearInterval(timer);//清空定时器
+			           	s--;
+			           	if(s<0){
+			           		s=3;
+			           	}
+					$(".banner img").eq(s).fadeIn(500).siblings('img').fadeOut(500);
+					$(".banner ul li").eq(s).css({'background':'#00bfff'}).siblings('li').css({'background':'#a5a5a5'});
+			          timer=setInterval(run,3000);
+			           })
+			           $('.next').click(function(){
+			           		clearInterval(timer);//清空定时器
+			           	s++;
+			           	if(s>3){
+			           		s=0;
+			           	}
+					$(".banner img").eq(s).fadeIn(500).siblings('img').fadeOut(500);
+					$(".banner ul li").eq(s).css({'background':'#00bfff'}).siblings('li').css({'background':'#a5a5a5'});
+			            timer=setInterval(run,3000);
+			           })
+				
+				})
+			</script>
 		</div>
 		<!--标签部分-->
 		<div class="box">
@@ -127,7 +196,7 @@
 						<li><a href="">模板手机</a></li>
 						<li><a href="">后台模板</a></li>
 						<li><a href="">个人博客</a></li>
-						<li><a href="">生活购物商城</a></li>
+						<li><a href="">购物商城</a></li>
 						<li><a href="">响应式商城</a></li>
 					</ul>
 				</div>
