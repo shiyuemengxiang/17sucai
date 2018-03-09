@@ -1,7 +1,14 @@
 *{
 	padding:0;
 	margin:0;
-
+}
+a{
+	font-size: 15px;
+	color:#333333;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration:none;
 }
 body{
 	background:rgb(245,245,245);
@@ -14,66 +21,63 @@ body{
    fill: currentColor;
    overflow: hidden;
 }
-/*登录按钮样式*/
-.reg>.reg-l>.qqlogo{
-	border:1px solid deepskyblue;
-	color:deepskyblue;
-	background: white;
-	width:120px;
-	height:30px;
-	margin:10px 180px;
-	text-align: center;
-	font-size: 14px;
-	display: block;
-}
 /*注册登录样式*/
 .t{
 	display: inline-block;
 	transform:translate(-20px,-5px);
+}
+/*登录按钮样式*/
+.qqlogo{
+	border:1px solid deepskyblue;
+	color:deepskyblue !important;
+	background: white;
+	width:100px;
+	height:30px;
+	margin:10px 180px;
+	text-align: center;
+	font-size: 14px!important;
+	overflow: hidden;
+	display: block;
 }
 .qqlogo>i,.qqlogin>i,.weibologin>i{
 	margin-right:5px;
 }
 .reg{
 	width:100%;
-	height:50px;
-	background:#fff;
-	/*background:#fff!important;*/
+	background: #fff;
 }
 .reg>.reg-r a{
 	color:#666;
-	font-size: 14px;
+	font-size: 16px;
 	margin-right:25px;
-	
 }
 .reg-r{
 	margin-top:10px;
 	margin-right:200px;
 }
-.reg>.reg-r>.qqlogin{
+.reg-r>.qqlogin{
 	border:1px solid deepskyblue;
-	color:deepskyblue;
+	color:deepskyblue !important;
 	background: white;
-	width:120px;
+	width:100px;
 	height:30px;
-	overflow:hidden;
 	/*margin:10px 180px;*/
 	text-align: center;
-	font-size: 15px;
-	overflow:hidden;
-	display:inline-block;
+	font-size: 14px!important;
+	display: inline-block;
+	overflow: hidden;
 }
-.reg>.reg-r>.weibologin{
+.weibologin{
 	border:1px solid #ff734a;
-	color:#ff734a;
+	color:#ff734a !important;
 	background: white;
-	width:120px;
+	width:100px;
 	height:30px;
 	/*margin:10px 180px;*/
 	text-align: center;
-	font-size: 15px;
-	overflow:hidden;
-	display:inline-block;
+	font-size: 14px!important;
+	display: inline-block;
+	overflow: hidden;
 }
 .reg a:hover{
 	text-decoration: none;
@@ -96,7 +100,7 @@ body{
 	width:100%;
 	height:80px;
 	background:#0082df;
-	/*overflow:hidden;*/
+	overflow:hidden;
 	
 }
 .header>.nav-left img{
@@ -109,12 +113,11 @@ body{
 .header>.nav-right ul>li{
 	list-style: none;
 	float:left;
-	/*margin-right:8px;*/
-	width:120px;
+	margin-right:80px;
+	width:90px;
 	height:80px;
 	text-align: center;
 	line-height: 80px;
-	/*background: red;*/
 }
 .header li>a{
 	font-size:20px;
@@ -138,24 +141,23 @@ body{
 .topsearch>.sear>input{
 	width:600px;
 	height:60px;
-	background:#fff;
+	background:white;
 	border:3px solid deepskyblue;
 	text-indent: 2em;
-	margin-top:40px;
+	/*line-height: 150px;*/
+	margin-top:30px;
 	outline:none;
 	
 }
 
 .sear>button{
 	background: deepskyblue;
-	width:120px;
+	width:150px;
 	height:60px;
 	color:white;
 	outline:none;
-	border:3px solid deepskyblue;
-	border: 0;
-	font-size:14px;
-	box-sizing: border-box;
+	border:1px solid deepskyblue;
+	font-size:18px;
 }
 .sear>button>i{
 	margin-right:10px;
@@ -218,7 +220,7 @@ body{
 /*标签部分*/
 .tag-l,.tag-r{
 	width:600px;
-	/*height:250px;*/
+	/*height:260px;*/
 	
 }
 .tag-l .tag-top,.tag-r .tag-top{
@@ -227,8 +229,8 @@ body{
 	line-height: 40px;
 	color:#000;
 	font-size:16px;
-	font-weight:bold;
 	text-indent: 2em;
+	font-weight:bold;
 }
 .tag a{
 	
@@ -238,21 +240,27 @@ body{
 .tag .tag-top a{
 	float: right;
 }
+.tag-left a,.tag-right a{
+	float: right;
+	margin-right:5px;
+	color:#000;
+}
 .tag a:hover{
 	text-decoration: none;
 }
 .tag-list{
 	width:100%;
-	height:150px;
+	height:140px;
 	border: 1px solid grey;
 }
 .tag-list ul li{
 	list-style: none;
 	float:left;
 	width:15%;
+	margin-top:4px;
 	margin-left: 25px;
-	margin-top:7px;
-	
+	margin-bottom:3px;
+	/*margin:1px px;*/
 }
 .tag-list ul li>a,{
 	color:#6e6e6e;
@@ -281,6 +289,41 @@ body{
 	background:#fff;
 	
 }
+/*瀑布流分布*/
+.code .nav>.nav-left{
+	float:left;
+}
+.code .nav>.nav-right{
+	float:right;
+}
+.code{
+	max-width:1300px;
+	margin:0px auto;
+}
+.code .nav .nav-left,.code .nav .nav-right{
+	margin-top: 30px;
+}
+.nav-left{
+	font-size: 18px;
+}
+.nav-right{
+	margin-right:50px;
+}
+.nav-right button{
+	width:80px;
+	height:30px;
+	background:#fff;
+	outline: none;
+	border:1px solid #d9d9d9;
+	margin-right:20px;
+	line-height: 30px;
+	color:#262626;
+}
+.nav-right button:hover{
+	background:#0082df;
+	color:#fff;
+}
+/*瀑布流展示区*/
 /*瀑布流分布*/
 .code .nav>.nav-left,.sign .nav>.nav-left{
 	float:left;
@@ -326,15 +369,12 @@ overflow:hidden;
 list-style: none;
 background:#fff;
 margin:20px 0px;
-box-sizing: border-box;
-/*padding:0 20px;*/
-margin-left: 10px;
-
+tr
 }
 .pic ul{
 float:left;
 width:280px;
-margin:10px 18px;
+margin:10px 50px 10px 0;
 }
 .pic ul>li p{
 width:280px;
@@ -388,11 +428,12 @@ float:right;
 .footer .box{
 	width:1200px;
 	line-height: 80px;
+	
 }
 /*顶部固定导航和搜索*/
 .fnav{
-	display:none;
 	position:fixed;
+	display:none;
 	top:0;
 	width:100%;
 	height:120px;
@@ -410,7 +451,7 @@ float:right;
 .fnav .nav .navl li{
 	float:left;
 	list-style: none;
-	width:80px;
+	width:100px;
 	height:50px;
 	line-height:50px;
 	font-size:15px;
@@ -454,10 +495,14 @@ float:right;
 	background:#fff;
 	float:left;
 	margin-top: -10px;
+	
 
 }
 .fnav .sear .search{
 	margin:20px auto;
+	/*margin-left:80px;*/
+	transform: translate(40px,0px);
+	
 }
 .fnav .sear img{
 	margin:18px 180px;
@@ -520,8 +565,7 @@ float:right;
 /*以下样式是code.html样式*/
 .add{
 	max-width: 1200px;
-	margin:0 60px;;
-
+	margin:10px 250px;
 }
 .add a,.add span{
 	color:rgb(153, 153, 153);
@@ -530,14 +574,6 @@ float:right;
 }
 .add span{
 	margin:0 10px;
-}
-a{
-	font-size: 15px;
-	color:#333333;
-	text-decoration: none;
-}
-a:hover{
-	text-decoration: none;
 }
 /*导航列表*/
 .title{
@@ -744,7 +780,7 @@ background: #168ee1!important;
 h3{
 		height:150px;
 		/*overflow: hidden;*/
-	margin:-100px 200px;
+	margin:-100px 400px;
 	/*text-align: center;*/
 	font-weight: bold;
 	font-size: 22px;
@@ -843,5 +879,3 @@ h3>span{
 	margin-top:40px;
 	margin-left:40px;
 }
-
-
