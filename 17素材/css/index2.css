@@ -1,11 +1,9 @@
 *{
 	padding:0;
 	margin:0;
-
 }
 body{
 	background:rgb(245,245,245);
-	/*background: green;*/
 }
 /*阿里矢量图库引用*/
 .icon {
@@ -35,7 +33,7 @@ body{
 	margin-right:5px;
 }
 .reg{
-	width:100%;
+	min-width:1200px;
 	height:50px;
 	background:#fff;
 	/*background:#fff!important;*/
@@ -48,7 +46,7 @@ body{
 }
 .reg-r{
 	margin-top:10px;
-	margin-right:200px;
+	margin-right:20px;
 }
 .reg>.reg-r>.qqlogin{
 	border:1px solid deepskyblue;
@@ -93,28 +91,38 @@ body{
 /*顶部导航栏*/
 .header{
 	/*margin-top: 120px;*/
-	width:100%;
+	min-width:1200px;
 	height:80px;
 	background:#0082df;
 	/*overflow:hidden;*/
+	position: relative;
 	
 }
 .header>.nav-left img{
+	position:absolute;
 	display:block;
-	margin:10px 180px;
+	left:150px;
+	top:16px;
+}
+.header>.nav-right{
+	width:;
+	height:80px;
+	margin-left:;
 }
 .header>.nav-right>ul{
-	margin-right:200px;
+	position:absolute;
+	top:0;
+	right:20px;
+	margin-left:150px;
+	width:800px;
 }
 .header>.nav-right ul>li{
 	list-style: none;
 	float:left;
-	/*margin-right:8px;*/
-	width:120px;
+	min-width:120px;
 	height:80px;
 	text-align: center;
 	line-height: 80px;
-	/*background: red;*/
 }
 .header li>a{
 	font-size:20px;
@@ -133,7 +141,14 @@ body{
 	background:rgb(255,255,255);
 }
 .topsearch>.sear{
-	text-align: center;
+	/*text-align: center;*/
+	position: relative;
+	width:720px;
+	background: #ff0036;
+	height:60px;
+	top:50px;
+	left:50%;
+	margin-left:-360px;
 }
 .topsearch>.sear>input{
 	width:600px;
@@ -141,12 +156,22 @@ body{
 	background:#fff;
 	border:3px solid deepskyblue;
 	text-indent: 2em;
-	margin-top:40px;
 	outline:none;
-	
+	position: absolute;
+	top:0px;
+	/*margin-left:-300px;
+	left:50%;*/
 }
 
 .sear>button{
+	position:absolute;
+	top:0;
+	left:600px;
+	/*margin-left:300px;*/
+	/*top:40px;*/
+	/*margin-left:670px;*/
+	/*left:490px;*/
+	
 	background: deepskyblue;
 	width:120px;
 	height:60px;
@@ -216,11 +241,20 @@ body{
 	right:3px;
 }
 /*标签部分*/
-.tag-l,.tag-r{
-	width:600px;
-	/*height:250px;*/
+	/*浮动两个标签列表*/
+.tag{
+	float:left;
+	margin:0 auto;
+	min-width: 1200px;
 	
 }
+.tag-l{
+	float:left;
+}
+.tag-r{
+	float:right;
+}
+/*两个标签内的首行样式*/
 .tag-l .tag-top,.tag-r .tag-top{
 	border:1px solid grey;
 	height:40px;
@@ -230,13 +264,14 @@ body{
 	font-weight:bold;
 	text-indent: 2em;
 }
-.tag a{
-	
+.box .tag .tag-list a{
+	font-size:15px;
 	margin-right:5px;
 	color:#6e6e6e;
 }
 .tag .tag-top a{
 	float: right;
+	margin-right:13px;
 }
 .tag a:hover{
 	text-decoration: none;
@@ -258,49 +293,50 @@ body{
 	color:#6e6e6e;
 	
 }
-/*浮动两个标签列表*/
-.tag{
-	float:left;
-	margin:0 auto;
-}
-.tag-l{
-	float:left;
-}
-.tag-r{
-	float:right
-}
 /*给标签父级居中*/
 .box{
-	max-width:1300px;
+	max-width:1200px;
 	margin:60px auto;
 }
 .box .tag-l,.box .tag-r{
 	/*box-sizing: border-box;*/
 	/*margin:0 50px;*/
-	margin-right: 50px;
+	margin-right:20px;
+	width:550px;
 	background:#fff;
 	
 }
 /*瀑布流分布*/
-.code .nav>.nav-left,.sign .nav>.nav-left{
+	/*瀑布流导航区域*/
+	.code>.nav,.sign>.nav{
+		clear:both;/*清除之前的浮动*/
+		width:1400px;
+		/*background: #ff0033;*/
+		margin:0 auto;
+	}
+	/*瀑布流导航左边样式*/
+	.code .nav>.nav-left,.sign .nav>.nav-left{
 	float:left;
+	max-width:150px;
 	font-size:28px;
+	margin-top:30px;
+	
 }
+	/*瀑布流导航右边样式*/
 .code .nav>.nav-right,.sign .nav>.nav-right{
+	margin-left:20px;
 	float:right;
-}
-.code,.sign{
-	max-width:1300px;
-	margin:0px auto;
-}
-.code .nav .nav-left,.code .nav .nav-right,.sign .nav .nav-left,.sign .nav .nav-right{
-	margin-top: 30px;
+	margin-top:30px;
 }
 .nav-left{
+	margin-left:40px;
+	display: inline-block;
 	font-size: 18px;
 }
 .nav-right{
-	margin-right:50px;
+	display: inline-block;
+	margin-right:0px;
+	width:1100px;
 }
 .nav-right button{
 	width:80px;
@@ -318,8 +354,8 @@ body{
 }
 /*瀑布流区域*/
 .code .pic,.sign .pic{
-width:1400px;
-margin:20px auto;
+width:1300px;
+margin:30px auto;
 overflow:hidden;
 }
 .code .pic ul>li,.sign .pic ul>li{
@@ -327,9 +363,7 @@ list-style: none;
 background:#fff;
 margin:20px 0px;
 box-sizing: border-box;
-/*padding:0 20px;*/
 margin-left: 10px;
-
 }
 .pic ul{
 float:left;
@@ -340,7 +374,6 @@ margin:10px 18px;
 width:280px;
 text-align:center;
 margin:10px 0;
-/*background:red;*/
 }
 .pic ul>li p i{
 margin-right:20px;
@@ -369,39 +402,38 @@ float:right;
 	font-size: 18px;
 	/*display:block;*/
 	/*width:5%;*/
-	margin:10px 10px 10px 0;
-	
+	margin:10px 10px 0px 0;
 }
 /*底部版权*/
-.footer,.footer a{
+.footer{
 	width:100%;
+	height:88px;
 	background:rgb(22, 142, 225);
-	height:80px;
-	color:#fff;
-	font-size:18px;
-	text-decoration: none;
-	
 }
-.footer a{
-	margin:0 20px;
-}
-.footer .box{
+.footer>.box{
 	width:1200px;
-	line-height: 80px;
+	text-align: center;	
+	transform: translateY(38px);
 }
+.footer>.box,.box a{
+	color:#fff;
+	font-size: 18px;
+	word-spacing:8px;/*字间距*/
+}
+/**/
 /*顶部固定导航和搜索*/
 .fnav{
 	display:none;
 	position:fixed;
 	top:0;
-	width:100%;
+	min-width:1980px;
 	height:120px;
-	background:red ;
+	background:deeppink;
 }
 .fnav .nav{
 	height:50px;
 	background:#3f4657;
-	
+	position: relative;
 }
 .fnav .nav .navl{
 	float:left;
@@ -414,8 +446,6 @@ float:right;
 	height:50px;
 	line-height:50px;
 	font-size:15px;
-	/*background-color:#00BFFF!important;*/
-	/*margin-right: 20px;*/
 	text-align: center;
 }
 .fnav .nav .navl li:hover{
@@ -426,17 +456,16 @@ float:right;
 	color:#fff;
 }
 .fnav .nav .navr {
-	float:right;
-	margin-right:80px;
-	
+	/*float:right;
+	margin-right:80px;*/
+	position:absolute;
+	right:580px;
 }
 .nav>.navr li{
 	float:left;
 	list-style: none;
-	/*line-height: 50px;*/
 }
 .nav>.navr li button{
-	/*line-height: 50px;*/
 	width:60px;
 	height:30px;
 	background:#569fe8;
@@ -519,9 +548,8 @@ float:right;
 }
 /*以下样式是code.html样式*/
 .add{
-	max-width: 1200px;
-	margin:0 60px;;
-
+	width: 1400px;
+	margin:30px auto;
 }
 .add a,.add span{
 	color:rgb(153, 153, 153);
@@ -541,7 +569,7 @@ a:hover{
 }
 /*导航列表*/
 .title{
-	max-width: 1400px;
+	width:1400px;
 	margin:0 auto;
 	height:100px;
 	background:rgb(255,255,255);
@@ -740,16 +768,20 @@ background: #168ee1!important;
 .tool>div:hover{
 	transform: translate(0,-3px);
 }
+.text{
+	width: 1200px;
+	height:60px;
+	margin:0 auto;
+}
 
 h3{
+	margin-left:18px;
 		height:150px;
-		/*overflow: hidden;*/
-	margin:-100px 200px;
-	/*text-align: center;*/
 	font-weight: bold;
 	font-size: 22px;
 	color:373737;
 }
+
 h3>span{
 	margin-left:28px;
 		font-size: 15px;

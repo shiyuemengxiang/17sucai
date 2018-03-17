@@ -113,7 +113,7 @@ body{
 .header>.nav-right ul>li{
 	list-style: none;
 	float:left;
-	margin-right:80px;
+	/*margin-right:80px;*/
 	width:90px;
 	height:80px;
 	text-align: center;
